@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wilmink ticket tracker</title>
+  <meta http-equiv="refresh" content="300">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f6f6f4;
+      color: #222;
+    }
+    .wrap {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 32px 18px;
+    }
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      margin-bottom: 20px;
+    }
+    h1 {
+      margin-top: 0;
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      color: #666;
+      margin-top: 0;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 14px;
+      margin-top: 20px;
+    }
+    .stat {
+      background: #f2f2ef;
+      border-radius: 12px;
+      padding: 16px;
+    }
+    .label {
+      color: #666;
+      font-size: 0.9rem;
+    }
+    .value {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-top: 4px;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      border: 1px solid #ddd;
+      background: white;
+    }
+    a {
+      color: #0645ad;
+    }
+    .small {
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>Wilmink ticket tracker</h1>
+      <p class="subtitle">Het VU-Orkest speelt Bruckners 8ste Symfonie</p>
+
+      <div class="stats">
+        <div class="stat">
+          <div class="label">Latest estimated sold</div>
+          <div class="value">25</div>
+        </div>
+        <div class="stat">
+          <div class="label">Latest measurement</div>
+          <div class="value" style="font-size: 1.35rem;">23-06-2026 21:15</div>
+        </div>
+        <div class="stat">
+          <div class="label">Data points</div>
+          <div class="value">16</div>
+        </div>
+        <div class="stat">
+          <div class="label">Manual / automatic</div>
+          <div class="value" style="font-size: 1.35rem;">9 / 7</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Graph</h2>
+      <img src="assets/wilmink_estimated_tickets_sold.png?cache=16" alt="Estimated tickets sold graph">
+      <p class="small">
+        This page updates when the tracker runs on the laptop and pushes new files to GitHub.
+      </p>
+      <p>
+        <a href="data/wilmink_all_plot_points.csv">Download plotted CSV data</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>
