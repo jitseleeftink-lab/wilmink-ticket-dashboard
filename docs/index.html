@@ -1,109 +1,181 @@
 <!doctype html>
-<html lang="en">
+<html lang="nl">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Wilmink ticket tracker</title>
+  <title>Kaartverkoop Wilminktheater Enschede</title>
   <meta http-equiv="refresh" content="300">
+
   <style>
+    :root {
+      --bg: #f6f1e8;
+      --card: #fffaf2;
+      --text: #2b2523;
+      --muted: #756b63;
+      --accent: #8b1e2d;
+      --line: #d8c8b8;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f6f6f4;
-      color: #222;
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(139, 30, 45, 0.11), transparent 32rem),
+        linear-gradient(135deg, #f6f1e8 0%, #efe4d4 100%);
+      color: var(--text);
+      min-height: 100vh;
     }
+
     .wrap {
-      max-width: 1050px;
+      max-width: 1120px;
       margin: 0 auto;
-      padding: 32px 18px;
+      padding: 42px 18px;
     }
-    .card {
-      background: white;
-      border-radius: 16px;
-      padding: 24px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-      margin-bottom: 20px;
+
+    .hero {
+      background: rgba(255, 250, 242, 0.92);
+      border: 1px solid rgba(216, 200, 184, 0.9);
+      border-radius: 26px;
+      padding: 34px;
+      box-shadow: 0 18px 50px rgba(43, 37, 35, 0.12);
+      margin-bottom: 24px;
     }
+
     h1 {
-      margin-top: 0;
-      margin-bottom: 8px;
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 4rem);
+      line-height: 1;
+      letter-spacing: -0.05em;
     }
+
     .subtitle {
-      color: #666;
-      margin-top: 0;
+      color: var(--muted);
+      margin-top: 14px;
+      margin-bottom: 0;
+      font-size: 1.05rem;
     }
+
     .stats {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-      gap: 14px;
-      margin-top: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 16px;
+      margin-top: 28px;
     }
+
     .stat {
-      background: #f2f2ef;
-      border-radius: 12px;
-      padding: 16px;
+      background: #ffffff;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 18px;
+      box-shadow: 0 8px 22px rgba(43, 37, 35, 0.06);
     }
+
     .label {
-      color: #666;
+      color: var(--muted);
       font-size: 0.9rem;
+      margin-bottom: 8px;
     }
+
     .value {
-      font-size: 2rem;
-      font-weight: 700;
-      margin-top: 4px;
+      font-size: 2.3rem;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      color: var(--accent);
     }
+
+    .value.small {
+      font-size: 1.45rem;
+      letter-spacing: -0.02em;
+      color: var(--text);
+    }
+
+    .card {
+      background: rgba(255, 250, 242, 0.95);
+      border: 1px solid rgba(216, 200, 184, 0.9);
+      border-radius: 26px;
+      padding: 24px;
+      box-shadow: 0 18px 50px rgba(43, 37, 35, 0.10);
+    }
+
+    .card h2 {
+      margin-top: 0;
+      margin-bottom: 18px;
+      font-size: 1.4rem;
+    }
+
     img {
       width: 100%;
       height: auto;
-      border-radius: 12px;
-      border: 1px solid #ddd;
+      display: block;
+      border-radius: 18px;
+      border: 1px solid var(--line);
       background: white;
     }
-    a {
-      color: #0645ad;
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 0.92rem;
     }
-    .small {
-      font-size: 0.9rem;
-      color: #666;
+
+    a {
+      color: var(--accent);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
+
 <body>
-  <div class="wrap">
-    <div class="card">
-      <h1>Wilmink ticket tracker</h1>
-      <p class="subtitle">Het VU-Orkest speelt Bruckners 8ste Symfonie</p>
+  <main class="wrap">
+    <section class="hero">
+      <h1>Kaartverkoop Wilminktheater Enschede</h1>
+      <p class="subtitle">Het VU-Orkest speelt Bruckners 8ste Symfonie · Muziekcentrum Enschede</p>
 
       <div class="stats">
         <div class="stat">
-          <div class="label">Latest estimated sold</div>
+          <div class="label">Laatste geschatte verkoop</div>
           <div class="value">25</div>
         </div>
+
         <div class="stat">
-          <div class="label">Latest measurement</div>
-          <div class="value" style="font-size: 1.35rem;">23-06-2026 21:15</div>
+          <div class="label">Laatste meting</div>
+          <div class="value small">23-06-2026 22:00</div>
         </div>
+
         <div class="stat">
-          <div class="label">Data points</div>
-          <div class="value">16</div>
+          <div class="label">Datapunten</div>
+          <div class="value">18</div>
         </div>
+
         <div class="stat">
-          <div class="label">Manual / automatic</div>
-          <div class="value" style="font-size: 1.35rem;">9 / 7</div>
+            <div class="label">Verkoop sinds gisteren 23:59</div>
+            <div class="value">+2</div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="card">
-      <h2>Graph</h2>
-      <img src="assets/wilmink_estimated_tickets_sold.png?cache=16" alt="Estimated tickets sold graph">
-      <p class="small">
-        This page updates when the tracker runs on the laptop and pushes new files to GitHub.
-      </p>
-      <p>
-        <a href="data/wilmink_all_plot_points.csv">Download plotted CSV data</a>
-      </p>
-    </div>
-  </div>
+    <section class="card">
+      <h2>Verkoopontwikkeling</h2>
+      <img src="assets/wilmink_estimated_tickets_sold.png?cache=18" alt="Grafiek geschatte kaartverkoop">
+
+      <div class="footer">
+        <span>Deze pagina wordt bijgewerkt wanneer de tracker draait.</span>
+        <a href="data/wilmink_all_plot_points.csv">Download CSV</a>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
