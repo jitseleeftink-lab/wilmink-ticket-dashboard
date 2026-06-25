@@ -1,4 +1,25 @@
+# Ignore everything by default
 *
+
+# Dashboard website
 !docs/
 !docs/**
+
+# GitHub Actions workflow
+!.github/
+!.github/**
+
+# Tracker code needed in the cloud
+!wilmink_seat_tracker.py
+!generate_site.py
+!requirements.txt
+
+# Data history needed by the cloud tracker
+!data/
+!data/manual_ticket_counts.csv
+!data/wilmink_seat_counts.csv
+!data/wilmink_daily_sales_estimate.csv
+!data/wilmink_all_plot_points.csv
+
+# Keep this file
 !.gitignore
