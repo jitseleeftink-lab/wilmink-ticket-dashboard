@@ -3,11 +3,12 @@ name: Update dashboard
 on:
   workflow_dispatch:
   schedule:
-    - cron: "55 * * * *"
+    - cron: "10 * * * *"
+      timezone: "Europe/Amsterdam"
 
 permissions:
   contents: write
-
+  
 jobs:
   update-dashboard:
     runs-on: ubuntu-latest
