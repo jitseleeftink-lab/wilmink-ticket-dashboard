@@ -3,9 +3,8 @@ name: Update dashboard
 on:
   workflow_dispatch:
   schedule:
-    - cron: "23 * * * *"
+    - cron: '23 * * * *'
       
-
 permissions:
   contents: write
   
